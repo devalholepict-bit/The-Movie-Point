@@ -1,0 +1,123 @@
+/* Admin Dashboard — Cinematic redesign */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.admin-tab {
+  padding: 10px 26px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: -1px;
+  letter-spacing: 0.1px;
+}
+.admin-tab:hover { color: var(--text-primary); }
+.admin-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.admin-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.admin-section-title  { font-size: 1.2rem; font-weight: 800; }
+
+.admin-feedback {
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+.admin-feedback.success { background: rgba(0,230,118,0.08); border: 1px solid rgba(0,230,118,0.3); color: var(--green); }
+.admin-feedback.error   { background: var(--accent-soft);  border: 1px solid rgba(255,0,80,0.35); color: var(--accent); }
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  background: var(--bg-card);
+}
+.admin-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.admin-table th {
+  background: var(--bg-elevated);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+.admin-table td { padding: 14px 16px; border-top: 1px solid var(--border); color: var(--text-primary); vertical-align: middle; }
+.admin-table tr:hover td { background: var(--bg-elevated); }
+.banned-row td { opacity: 0.55; }
+
+.admin-movie-thumb { width: 48px; height: 64px; object-fit: cover; border-radius: var(--radius-sm); }
+.admin-movie-title { font-weight: 600; max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.admin-actions { display: flex; gap: 8px; }
+.admin-btn {
+  padding: 5px 14px !important;
+  font-size: 0.78rem !important;
+  white-space: nowrap;
+  border-radius: 999px !important;
+}
+.danger-btn {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  border: 1px solid rgba(255,0,80,0.35) !important;
+}
+.danger-btn:hover { background: var(--accent) !important; color: #fff !important; box-shadow: var(--shadow-glow) !important; }
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.role-badge.admin { background: rgba(255,195,0,0.12); color: var(--gold); border: 1px solid rgba(255,195,0,0.3); }
+.role-badge.user  { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border); }
+
+.status-badge { font-size: 0.8rem; font-weight: 700; }
+.status-badge.active { color: var(--green); }
+.status-badge.banned { color: var(--accent); }
+
+.user-name-cell { display: flex; align-items: center; gap: 10px; }
+.user-avatar-sm {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #ff6a8b);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(255,0,80,0.3);
+}
+.text-muted-sm { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Admin Modal */
+.admin-modal { padding: 36px; }
+.modal-title { font-size: 1.3rem; font-weight: 900; margin-bottom: 24px; letter-spacing: -0.3px; }
+.admin-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+@media (max-width: 600px) { .admin-form-grid { grid-template-columns: 1fr; } }
+.admin-form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}

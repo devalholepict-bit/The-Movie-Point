@@ -1,0 +1,54 @@
+/* Movies & TV Pages */
+.movies-page { padding-bottom: 80px; }
+
+.page-heading {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+.page-subheading { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
+
+.genre-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.genre-chip {
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.2px;
+}
+.genre-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+.genre-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.load-more-spinner { display: flex; justify-content: center; padding: 40px; }
+.end-message {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}

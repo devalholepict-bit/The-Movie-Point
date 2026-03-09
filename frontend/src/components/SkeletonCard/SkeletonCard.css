@@ -1,0 +1,31 @@
+/* Skeleton Card */
+.skeleton-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+}
+.skeleton-poster { aspect-ratio: 2 / 3; }
+.skeleton-info { padding: 13px 12px; display: flex; flex-direction: column; gap: 9px; }
+.skeleton-line {
+  height: 11px;
+  border-radius: 999px;
+}
+.skeleton-line.wide  { width: 88%; }
+.skeleton-line.short { width: 52%; }
+
+/* Shimmer (used globally) */
+.shimmer {
+  background: linear-gradient(90deg,
+    var(--bg-elevated) 0%,
+    rgba(255,255,255,0.05) 40%,
+    var(--bg-elevated) 80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+@keyframes shimmer {
+  0%   { background-position: -800px 0; }
+  100% { background-position:  800px 0; }
+}

@@ -1,0 +1,24 @@
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,0,80,0.06) 0%, transparent 65%);
+}
+.notfound-content { max-width: 500px; }
+.notfound-code {
+  font-size: clamp(7rem, 22vw, 11rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent) 0%, #ff6a8b 60%, rgba(255,0,80,0.3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 40px rgba(255,0,80,0.35));
+}
+.notfound-title { font-size: 2rem; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.3px; }
+.notfound-desc { color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 36px; }
+.notfound-btn { padding: 14px 38px !important; font-size: 1rem !important; font-weight: 800 !important; }
