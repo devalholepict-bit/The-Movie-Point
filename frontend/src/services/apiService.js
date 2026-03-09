@@ -36,9 +36,9 @@ apiClient.interceptors.response.use(
 );
 
 // Auth
-export const registerUser = (data) => apiClient.post('/register', data);
-export const loginUser = (data) => apiClient.post('/login', data);
-export const getMe = () => apiClient.get('/me');
+export const registerUser = (data) => apiClient.post('/auth/register', data);
+export const loginUser = (data) => apiClient.post('/auth/login', data);
+export const getMe = () => apiClient.get('/auth/me');
 
 // Movies (admin)
 export const fetchAdminMovies = (params) => apiClient.get('/movies', { params });

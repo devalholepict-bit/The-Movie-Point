@@ -10,14 +10,18 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({
+const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://the-movie-point.vercel.app'
+    'https://the-movie-point.vercel.app',
   ],
   credentials: true,
-}));
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.options('*', cors(corsOptions)); // Handle pre-flight for all routes
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
