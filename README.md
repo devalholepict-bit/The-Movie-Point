@@ -36,8 +36,7 @@ TESTING/
     │   ├── services/             # tmdbService.js, apiService.js
     │   └── utils/                # helpers.js
     └── .env                      # TMDB API key + backend URI
-
-
+```
 
 ## ✨ Features
 
